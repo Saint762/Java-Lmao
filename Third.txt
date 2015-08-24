@@ -1,0 +1,66 @@
+package introduction.gibson;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class First {
+	
+	public static int getGames() {
+		Scanner reader = new Scanner(System.in);
+		System.out.println("Enter the number of games the Riders have played: ");
+		// get user input for a
+		int games = reader.nextInt();
+		return games;
+		// TODO Auto-generated method stub
+
+	}
+	
+	@SuppressWarnings("null")
+	public static int[][] calculateGameScores(int games) {
+		int i=1;
+		int[ ][ ] arrayGames = new int[10][10];
+		for(i=1;i<=games;i++){
+			System.out.println("Enter the Information for game " + i);
+			Scanner reader = new Scanner(System.in);
+			System.out.println("Enter the rider's score: ");
+			int score = reader.nextInt();
+			System.out.println("Enter the other team's score: ");
+			int otherTeamScore = reader.nextInt();
+			
+			if(score < otherTeamScore){
+				int outcome = 0;
+				
+				arrayGames[0][0] = score;
+				arrayGames[0][1] = otherTeamScore;
+				arrayGames[0][2] = outcome;
+				
+			} else {
+				int outcome = 1;
+				
+				arrayGames[0][0] = score;
+				arrayGames[0][1] = otherTeamScore;
+				arrayGames[0][2] = outcome;
+				
+				}
+
+		}
+		
+		return arrayGames;
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int games = getGames();
+		int[][] arrayGames = calculateGameScores(games);
+		//System.out.println(arrayGames[0][0]);
+		for(int[] u : arrayGames){
+			System.out.print("Score: " + u[0] + "\n");
+			System.out.print("Score Against: " + u[1] + "\n");
+			System.out.print("Outcome: " + u[2] + "\n");
+			
+			}
+		
+	}
+
+}

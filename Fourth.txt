@@ -1,0 +1,40 @@
+package introduction.gibson;
+
+import java.util.Scanner;
+
+public class Second {
+
+	public static int getCourses() {
+		Scanner reader = new Scanner(System.in);
+		System.out.println("Enter the number of courses that you're taking: ");
+		// get user input for a
+		int courses = reader.nextInt();
+		return courses;
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static int[][] calculateGameScores(int courses) {
+		int i=1;
+		int[ ][ ] arrayGames = new int[courses][10];
+		for(i=1;i<=courses;i++){
+			System.out.println("Enter the course code for course number " + i);
+			Scanner reader = new Scanner(System.in);
+			System.out.println("Enter the credit hours: ");
+			int course = reader.nextInt();
+			System.out.println("Enter the mark you got in the course: ");
+			int otherTeamScore = reader.nextInt();
+			
+			
+		}
+		
+		return arrayGames;
+
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
